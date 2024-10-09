@@ -1,0 +1,27 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "storageAccountName": {
+        "value": "deploymentlabaccount"
+      },
+      "webAppName": {
+        "value": "deploymentlab1webapp"
+      },
+      "location": {
+        "value": "West Europe"
+      },
+      "appServicePlanName": {
+        "value": "deploymentlabplan"
+      },
+      "storageSkuName": {
+        "value": "Standard_LRS"
+      },
+      "storageKind": {
+        "value": "StorageV2"
+      },
+      "webAppSkuName": {
+        "value": "F1"
+      }
+    }
+}  
