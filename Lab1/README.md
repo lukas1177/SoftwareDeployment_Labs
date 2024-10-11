@@ -18,8 +18,14 @@ This ReadMe describes the usage of the Azure ARM template for deploying resource
 
 The azuredeploy.json file can be used as it is to create a storage account and the web application. To use it with different parameters the parameter file can be updated to change the values of the parameters described in the chapter above.  
 
-To use the ARM template and parameter file, execute the following Azure CLI command:
+To use the ARM template and parameter file, first install the Azure CLI and login with the command:
+
+```bash
+az login
+```
+Then execute the following Azure CLI command:
 
 ```bash
 
 az deployment group create --resource-group <RESOURCE_GROUP_NAME> --template-file azuredeploy.json --parameters @azuredeploy.parameters.json
+```
