@@ -8,7 +8,7 @@ describe('GET /', () => {
         chai.request.execute(app)
             .get('/')
             .end((err, res) => {
-                expect(res.text).to.equal('Hello World!');
+                expect('Hello, world!').to.equal(res.text);
                 done();
             });
     });
