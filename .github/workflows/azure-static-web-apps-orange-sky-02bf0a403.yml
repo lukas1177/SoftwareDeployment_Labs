@@ -32,9 +32,11 @@ jobs:
       # Install dependencies (you can add additional npm install steps here if needed)
       - name: Install dependencies
         run: npm install
+        working-directory: ./Lab2
 
       - name: Install OIDC Client from Core Package
         run: npm install @actions/core@1.6.0 @actions/http-client
+        working-directory: ./Lab2
 
       - name: Get Id Token
         uses: actions/github-script@v6
