@@ -55,11 +55,8 @@ jobs:
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           app_location: "/Lab2/"  # App source code path
           api_location: "/Lab2/"  # API source code path - optional
-          output_location: ""     # Built app content directory - optional
+          output_location: "/Lab2/"     # Built app content directory - optional
           github_id_token: ${{ steps.idtoken.outputs.result }}
-        env: # Add environment variables here
-          is_static_export: true
-          skip_app_build: true
           ###### End of Repository/Build Configurations ######
   
   close_pull_request_job:
