@@ -4,7 +4,7 @@ import chaiHttp from 'chai-http';
 
 const chai = use(chaiHttp);
 
-describe('GET /', () => {
+describe('GET /hello', () => {
   it('should return Hello World', (done) => {
     chai.request.execute(app)
       .get('/')
