@@ -57,6 +57,8 @@ jobs:
           api_location: "/Lab2/"  # API source code path - optional
           output_location: ""     # Built app content directory - optional
           github_id_token: ${{ steps.idtoken.outputs.result }}
+        env: # Add environment variables here
+          is_static_export: true
           ###### End of Repository/Build Configurations ######
   
   close_pull_request_job:
