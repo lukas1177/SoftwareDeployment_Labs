@@ -48,7 +48,8 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_LEMON_BEACH_0DC289903 }}
           action: "upload"
           app_location: "/Lab2" # App source code path
-
+          api_location: "/Lab2" # API source code path - optional
+          output_location: "" # Built app content directory - optional
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
