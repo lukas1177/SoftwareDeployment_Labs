@@ -7,7 +7,7 @@ For clarification, I used Web Apps instead of Static Web Apps since it didn't wo
 ### Dev Web App
 https://lab2dev-hpe2fygdgng3gght.westeurope-01.azurewebsites.net/
 
-### Release Web App
+### Production Web App
 https://lab2release-fuctb5gqg0dea3gg.westeurope-01.azurewebsites.net/
 
 ## Screenshots
@@ -22,4 +22,4 @@ https://lab2release-fuctb5gqg0dea3gg.westeurope-01.azurewebsites.net/
 ![Screenshot](../images/lab2/succeededRelease.png)
 
 ## How Releases work
-There is a workflow file in the release branch which achieves that for every commit in this branch, so also when code is merged into this branch, the code is deployed to the release web app.
+There is a workflow file in the release branch which achieves that for every commit in this branch, so also when code is merged into this branch, the code is deployed to the production web app.
