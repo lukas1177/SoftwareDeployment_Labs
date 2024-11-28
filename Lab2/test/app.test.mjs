@@ -7,7 +7,7 @@ const chai = use(chaiHttp);
 describe('GET /hello', () => {
   it('should return Hello World', (done) => {
     chai.request.execute(app)
-      .get('/')
+      .get('/hello')
       .end((err, res) => {
         if (err) return done(err);
         expect(res).to.have.status(200);
