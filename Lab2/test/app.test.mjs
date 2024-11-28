@@ -4,10 +4,10 @@ import chaiHttp from 'chai-http';
 
 const chai = use(chaiHttp);
 
-describe('GET /hello', () => {
+describe('GET /api/hello', () => {
   it('should return Hello World', (done) => {
     chai.request.execute(app)
-      .get('/hello')
+      .get('/api/hello')
       .end((err, res) => {
         if (err) return done(err);
         expect(res).to.have.status(200);
