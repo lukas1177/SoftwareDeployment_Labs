@@ -11,4 +11,4 @@ app.get('/api/hello', (req, res) => {
     res.send('Hello World');
   });
 
-export { app, server };  // Export both app and server for later control
+export { app, server };
