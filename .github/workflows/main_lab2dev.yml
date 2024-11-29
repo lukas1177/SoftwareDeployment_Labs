@@ -7,6 +7,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'Lab2/**'
   workflow_dispatch:
 
 jobs:
