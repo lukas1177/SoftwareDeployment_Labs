@@ -1,0 +1,34 @@
+services:
+  wordpress:
+    build:
+      context: ./wordpress
+    container_name: wordpress_custom
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: mariadb_custom:3306
+      WORDPRESS_DB_USER: user
+      WORDPRESS_DB_PASSWORD: password
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - wordpress_data:/var/www/html
+    depends_on:
+      - mariadb_custom
+
+  mariadb_custom:
+    build:
+      context: ./mariadb  # Path to your custom Dockerfile
+    container_name: mariadb_custom
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: wordpress
+    volumes:
+      - mariadb_data:/var/lib/mysql
+
+volumes:
+  wordpress_data:
+  mariadb_data:
