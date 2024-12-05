@@ -2,7 +2,7 @@
 FROM debian:bookworm
 
 # Environment variables
-ENV WORDPRESS_DB_HOST=localhost:3306
+ENV WORDPRESS_DB_HOST=mariadb_custom:3306
 ENV WORDPRESS_DB_USER=user
 ENV WORDPRESS_DB_PASSWORD=password
 ENV WORDPRESS_DB_NAME=wordpress
@@ -29,6 +29,8 @@ WORKDIR /var/www/html
 # Setup Website
 RUN wget -O wordpress.zip https://wordpress.org/latest.zip && \
     unzip wordpress.zip && \
+    mv wordpress/* ./ && \
+    rmdir wordpress && \
     rm wordpress.zip && \
     chown -R www-data:www-data /var/www/html && \
     rm -f /var/www/html/index.html # Remove the default index.html file
