@@ -48,5 +48,6 @@ After these steps the website was running successfully as can be seen in the scr
 
 ![Wordpress site](../images/lab4/wordpressSite.png)
 
-This is the running minikube container in docker desktop:
-![Minikube container](../images/lab4/minikubeContainer.png)
+This is the dashboard of the running kubernetes cluster.
+
+![Minikube container](../images/lab4/dashboard.png)
